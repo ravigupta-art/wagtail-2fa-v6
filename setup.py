@@ -34,7 +34,7 @@ with open("README.rst") as fh:
 
 setup(
     name="wagtail-2fa-v6",
-    version="1.0.2",
+    version="1.0.3",
     description="Wagtail two-factor auth, updated for Wagtail 6+",
     author="ravigupta-art",
     author_email="52917700+ravigupta-art@users.noreply.github.com",
