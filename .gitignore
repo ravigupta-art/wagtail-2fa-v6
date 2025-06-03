@@ -11,6 +11,13 @@
 .venv
 .idea/
 
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyo                   
+
 /build/
 /dist/
 /docs/_build/
@@ -18,6 +25,11 @@
 /.mypy_cache/
 
 
+
 # Editors
 .idea/
 /venv/
+/env/
+/.vscode/
+/.vscode-test/
+

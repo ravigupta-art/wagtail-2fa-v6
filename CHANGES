@@ -1,3 +1,16 @@
+0.1.0 (2024-06-03)
+==================
+- Rename package to **wagtail-2fa-v6**, drop support for Wagtail < 6.0 (require `wagtail>=6.2`).
+- Using `{% formattedfield %}` tags in templates to replace direct use of wagtailadmin/shared/field.html to fix `TemplateSyntaxError` in template otp_form.html. Refer to wagtail 6.0 reslease notes: https://docs.wagtail.org/en/v7.0/releases/6.0.html
+- Fix logout‐in‐a‐loop by using HTML5 `formaction` + `formmethod="post"` on the “Sign out” button so it POSTS to `/admin/logout/?next=/admin/login/`.
+- Update hook signature `register_user_listing_buttons` to match Wagtail 6.2+.
+- Update dependencies:
+  - Django>=5.2
+  - wagtail>=6.2
+  - django-otp>=0.8.1
+  - qrcode>=6.1
+
+
 1.6.9 (2023-12-20)
 =================
  - Include template for branding logo for wagtail > 5.0 

@@ -1,28 +1,21 @@
 .. start-no-pypi
 
-.. image:: https://github.com/labd/wagtail-2fa/workflows/Python%20Tests/badge.svg
-    :target: https://github.com/labd/wagtail-2fa/actions?query=workflow%3A%22Python+Tests%22
+.. image:: https://img.shields.io/pypi/v/wagtail-2fa-v6.svg
+   :alt: PyPI version
+   :target: https://pypi.org/project/wagtail-2fa-v6/
 
-.. image:: http://codecov.io/github/labd/wagtail-2fa/coverage.svg?branch=master
-    :target: http://codecov.io/github/labd/wagtail-2fa?branch=master
-
-.. image:: https://img.shields.io/pypi/v/wagtail-2fa.svg
-    :target: https://pypi.python.org/pypi/wagtail-2fa/
-
-.. image:: https://readthedocs.org/projects/wagtail-2fa/badge/?version=stable
-    :target: https://wagtail-2fa.readthedocs.io/en/stable/?badge=stable
-
-.. image:: https://img.shields.io/github/stars/labd/wagtail-2fa.svg?style=social&logo=github
-    :target: https://github.com/labd/wagtail-2fa/stargazers
+.. image:: https://img.shields.io/github/license/ravigupta-art/wagtail-2fa-v6.svg
+   :alt: License
+   :target: https://github.com/ravigupta-art/wagtail-2fa-v6/blob/main/LICENSE
 
 .. end-no-pypi
 
 ===========
-wagtail-2fa
+wagtail-2fa-v6
 ===========
 
-This Django app adds two factor authentication to Wagtail. Behind the scenes
-it use django-otp_ which supports Time-based One-Time Passwords (TOTP). This
+A fork of `wagtail-2fa <https://github.com/LabD/wagtail-2fa>`_ updated for Wagtail 6+ and Django 5.2+.  
+Provides Time-based One-Time Password (TOTP) two-factor authentication in the Wagtail admin. This
 allows you to use various apps like Authy, Google Authenticator, or
 1Password.
 
@@ -35,7 +28,7 @@ Installation
 
 .. code-block:: shell
 
-   pip install wagtail-2fa
+   pip install wagtail-2fa-v6
 
 
 Then add the following lines to the ``INSTALLED_APPS`` list in your Django

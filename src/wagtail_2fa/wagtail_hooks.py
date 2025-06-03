@@ -69,7 +69,7 @@ def register(request):
 
 
 @hooks.register("register_user_listing_buttons")
-def register_user_listing_buttons(context, user):
+def register_user_listing_buttons(user, request_user):
     yield UserListingButton(
         _("Manage 2FA"),
         reverse("wagtail_2fa_device_list", kwargs={"user_id": user.id}),
