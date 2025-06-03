@@ -1,6 +1,33 @@
 [build-system]
-requires = [
-  "setuptools>=40.8.0",
-  "wheel",
-]
+requires = ["setuptools>=40.8.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "wagtail-2fa-v6"
+version = "0.1.0"
+description = "Wagtail two-factor auth, updated for Wagtail 6+ (with Django 5.2+)"
+readme = "README.rst"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+  { name = "ravigupta-art", email = "52917700+ravigupta-art@users.noreply.github.com" },
+]
+classifiers=[
+    "Development Status :: 4 - Beta",
+    "Framework :: Django",
+    "Framework :: Django :: 5.2",
+    "Framework :: Wagtail",
+    "Framework :: Wagtail :: 6",
+    "Framework :: Wagtail :: 7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+Homepage = "https://github.com/ravigupta-art/wagtail-2fa-v6"
+Issues   = "https://github.com/ravigupta-art/wagtail-2fa-v6/issues"
