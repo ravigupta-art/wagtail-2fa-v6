@@ -1,28 +1,18 @@
-===========
-wagtail-2fa-v6
-===========
+# wagtail-2fa-v6
 
-A fork of `wagtail-2fa <https://github.com/LabD/wagtail-2fa>`_ updated for Wagtail 6+ and Django 5.2+.  
-Provides Time-based One-Time Password (TOTP) two-factor authentication in the Wagtail admin. This
-allows you to use various apps like Authy, Google Authenticator, or
-1Password.
+A fork of [`wagtail-2fa`](https://github.com/LabD/wagtail-2fa) updated for **Wagtail 6+** and **Django 5.2+**.Provides Time-based One-Time Password (TOTP) two-factor authentication in the Wagtail admin.
 
+Use apps like **Authy**, **Google Authenticator**, or **1Password** to secure your Wagtail login.
 
-.. _django-otp: https://django-otp-official.readthedocs.io
+📖 [Django OTP Documentation](https://django-otp-official.readthedocs.io)
 
+* * *
 
-Installation
-============
+## Installation
 
-.. code-block:: shell
+    pip install wagtail-2fa-v6
 
-   pip install wagtail-2fa-v6
-
-
-Then add the following lines to the ``INSTALLED_APPS`` list in your Django
-settings:
-
-.. code-block:: python
+Then add the following to your `INSTALLED_APPS` in `settings.py`:
 
     INSTALLED_APPS = [
         # ...
@@ -32,52 +22,38 @@ settings:
         # ...
     ]
 
-Next add the required middleware to the ``MIDDLEWARE``. It should come
-after the AuthenticationMiddleware:
-
-.. code-block:: python
+Next, add the middleware **after** `AuthenticationMiddleware`:
 
     MIDDLEWARE = [
-        # .. other middleware
+        # ... other middleware
         # 'django.contrib.auth.middleware.AuthenticationMiddleware',
-
+    
         'wagtail_2fa.middleware.VerifyUserMiddleware',
-
+    
         # 'wagtail.core.middleware.SiteMiddleware',
-        # .. other middleware
+        # ... other middleware
     ]
 
-Migrate your database:
+Run migrations:
 
-.. code-block:: shell
+    python manage.py migrate
 
-   python manage.py migrate
+* * *
 
+## Settings
 
+Set the following in your Django `settings.py` file:
 
-Settings
-========
+* `WAGTAIL_2FA_REQUIRED` (default `False`):Force 2FA login for all staff, superusers, and users with access to the Wagtail admin.
+  
+* `WAGTAIL_2FA_OTP_TOTP_NAME` (default `False`):Issuer name for authenticator app. Defaults to `WAGTAIL_SITE_NAME` if set.(Sets `OTP_TOTP_ISSUER` under the hood.)
+  
 
-The following settings are available (Set via your Django settings):
+* * *
 
-- ``WAGTAIL_2FA_REQUIRED`` (default ``False``): When set to True all
-  staff, superuser and other users with access to the Wagtail Admin site
-  are forced to login using two factor authentication.
-- ``WAGTAIL_2FA_OTP_TOTP_NAME`` (default: ``False``): The issuer name to
-  identify which site is which in your authenticator app. If not set and
-  ``WAGTAIL_SITE_NAME`` is defined it uses this. sets ``OTP_TOTP_ISSUER``
-  under the hood.
+## Making 2FA Optional
 
-
-Making 2FA optional
-===================
-
-With the default ``VerifyUserMiddleware`` middleware, 2FA is enabled for every user.
-To make 2FA optional, use the ``VerifyUserPermissionsMiddleware`` middleware instead.
-
-To do so, use the ``VerifyUserPermissionsMiddleware`` middleware instead of the ``VerifyUserMiddleware`` in your Django settings:
-
-.. code-block:: python
+To make 2FA **optional** (enabled per group), replace the middleware in your settings:
 
     MIDDLEWARE = [
         # ...
@@ -86,25 +62,24 @@ To do so, use the ``VerifyUserPermissionsMiddleware`` middleware instead of the 
         # ...
     ]
 
-When this middleware is used, a checkbox is added to the group permissions
-and 2FA can be enabled or disabled per group.
+* This adds a checkbox to group permissions to enable or disable 2FA.
+* **Superusers** are always required to use 2FA.
 
-2FA is always enabled for superusers, regardless of the middleware used.
+* * *
 
+## Sandbox
 
-Sandbox
-=======
+To run a sandbox environment:
 
-First create a new virtualenv with Python 3.8 and activate it. Then run
-the following commands:
+1. Create a virtual environment with Python 3.8
+2. Activate it
+3. Run:
 
-.. code-block:: shell
+    make sandbox
 
-   make sandbox
+Access the admin at: [http://localhost:8000/admin/](http://localhost:8000/admin/)
 
+Login credentials:
 
-You can then visit http://localhost:8000/admin/ and login with the following
-credentials:
-
-- E-mail: ``superuser@example.com``
-- Password: ``testing``
+* **E-mail:** `superuser@example.com`
+* **Password:** `testing`
