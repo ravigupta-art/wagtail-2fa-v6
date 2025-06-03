@@ -22,7 +22,7 @@ updates:
     - 5.7.0
   - dependency-name: django-debug-toolbar
     versions:
-    - "3.2"
+    - "5.2"
   - dependency-name: pytest-django
     versions:
     - 4.1.0
