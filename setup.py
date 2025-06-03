@@ -62,6 +62,7 @@ setup(
         "wagtail>=6.2",
         "django-otp>=0.8.1",
         "qrcode>=6.1",
+        "six>=1.14.0",
     ],
     extras_require={
         "docs": ["sphinx>=1.4.1", "sphinx_rtd_theme>=0.4.3"],
