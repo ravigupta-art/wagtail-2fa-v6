@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wagtail-2fa-v6"
-version = "1.0.0"
+version = "1.0.1"
 description = "Wagtail two-factor auth, updated for Wagtail 6+ (with Django 5.2+)"
 readme = { file = "README.rst", content-type = "text/x-rst" }
 requires-python = ">=3.8"
