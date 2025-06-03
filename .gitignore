@@ -1,0 +1,23 @@
+*.egg-info
+*.pyc
+.pytest*
+*.sqlite3
+.tox
+.coverage
+.coverage.*
+.eggs
+.cache
+.python-version
+.venv
+.idea/
+
+/build/
+/dist/
+/docs/_build/
+/htmlcov/
+/.mypy_cache/
+
+
+# Editors
+.idea/
+/venv/
