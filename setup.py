@@ -32,7 +32,7 @@ tests_require = [
 
 setup(
     name="wagtail-2fa-v6",
-    version="1.0.5",
+    version="1.0.6",
     description="Wagtail two-factor auth, updated for Wagtail 6+",
     long_description=long_description_text,
     long_description_content_type="text/markdown",
