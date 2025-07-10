@@ -3,7 +3,11 @@
 [![PyPI version](https://img.shields.io/pypi/v/wagtail-2fa-v6.svg)](https://pypi.org/project/wagtail-2fa-v6/)
 [![Release to PyPi](https://github.com/ravigupta-art/wagtail-2fa-v6/actions/workflows/python-release.yml/badge.svg)](https://github.com/ravigupta-art/wagtail-2fa-v6/actions/workflows/python-release.yml)
 
-A fork of [`wagtail-2fa`](https://github.com/LabD/wagtail-2fa) updated for **Wagtail 6+** and **Django 5.2+**.Provides Time-based One-Time Password (TOTP) two-factor authentication in the Wagtail admin.
+**Supported Python:** 3.10, 3.11, 3.12, 3.13  
+**Supported Django:** 5.2+  
+**Supported Wagtail:** 6.2+
+
+A fork of [`wagtail-2fa`](https://github.com/LabD/wagtail-2fa) updated for **Wagtail 6+** and **Django 5.2+**. Provides Time-based One-Time Password (TOTP) two-factor authentication in the Wagtail admin.
 
 Use apps like **Authy**, **Google Authenticator**, or **1Password** to secure your Wagtail login.
 
@@ -30,9 +34,7 @@ Next, add the middleware **after** `AuthenticationMiddleware`:
     MIDDLEWARE = [
         # ... other middleware
         # 'django.contrib.auth.middleware.AuthenticationMiddleware',
-    
         'wagtail_2fa.middleware.VerifyUserMiddleware',
-    
         # 'wagtail.core.middleware.SiteMiddleware',
         # ... other middleware
     ]
