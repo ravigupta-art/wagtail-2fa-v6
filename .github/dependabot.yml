@@ -16,7 +16,7 @@ updates:
     - "5.4"
   - dependency-name: pytest
     versions:
-    - 6.2.2
+    # 6.2.x removed, only 6.3+ supported
   - dependency-name: isort
     versions:
     - 5.7.0

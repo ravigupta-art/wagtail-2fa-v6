@@ -5,7 +5,7 @@
 
 **Supported Python:** 3.10, 3.11, 3.12, 3.13  
 **Supported Django:** 5.2+  
-**Supported Wagtail:** 6.2+
+**Supported Wagtail:** 6.3+
 
 A fork of [`wagtail-2fa`](https://github.com/LabD/wagtail-2fa) updated for **Wagtail 6+** and **Django 5.2+**. Provides Time-based One-Time Password (TOTP) two-factor authentication in the Wagtail admin.
 

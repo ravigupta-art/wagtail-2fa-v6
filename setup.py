@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 
 install_requires = [
     "Django>=5.2",
-    "Wagtail>=6.2",
+    "Wagtail>=6.3",
     "django-otp>=0.8.1",
     "six>=1.14.0",
     "qrcode>=6.1",
@@ -13,7 +13,7 @@ install_requires = [
 
 tests_require = [
     "coverage==5.5",
-    "pytest==6.2.4",
+    "pytest",
     "pytest-cov==2.12.1",
     "pytest-django==4.4.0",
     # Linting
@@ -54,7 +54,7 @@ setup(
     include_package_data=True,
     install_requires=[
         "Django>=5.2",
-        "wagtail>=6.2",
+        "wagtail>=6.3",
         "django-otp>=0.8.1",
         "qrcode>=6.1",
         "six>=1.14.0",
