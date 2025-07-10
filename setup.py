@@ -27,7 +27,7 @@ tests_require = [
 
 setup(
     name="wagtail-2fa-v6",
-    version="1.0.3",
+    version="1.0.4",
     description="Wagtail two-factor auth, updated for Wagtail 6+",
     # long_description and long_description_content_type are now handled by pyproject.toml
     author="ravigupta-art",
