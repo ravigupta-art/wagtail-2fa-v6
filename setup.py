@@ -1,7 +1,13 @@
+import os
 import re
 
 from setuptools import find_packages, setup
 
+
+def readme():
+    with open(os.path.join(os.path.dirname(__file__), "README.md"), encoding="utf-8") as f:
+        return f.read()
+long_description_text = readme()
 
 install_requires = [
     "Django>=5.2",
@@ -24,12 +30,12 @@ tests_require = [
 ]
 
 
-
 setup(
     name="wagtail-2fa-v6",
     version="1.0.5",
     description="Wagtail two-factor auth, updated for Wagtail 6+",
-    # long_description and long_description_content_type are now handled by pyproject.toml
+    long_description=long_description_text,
+    long_description_content_type="text/markdown",
     author="ravigupta-art",
     author_email="ravi.opensource@protonmail.com",
     url="https://github.com/ravigupta-art/wagtail-2fa-v6",
