@@ -88,3 +88,5 @@ Login credentials:
 
 * **E-mail:** `superuser@example.com`
 * **Password:** `testing`
+
+Note: This is still in development. Contribution and testing is highly appreciated. 
