@@ -2,17 +2,13 @@ import re
 
 from setuptools import find_packages, setup
 
+
 install_requires = [
     "Django>=5.2",
     "Wagtail>=6.2",
     "django-otp>=0.8.1",
     "six>=1.14.0",
     "qrcode>=6.1",
-]
-
-docs_require = [
-    "sphinx>=1.4.1",
-    "sphinx_rtd_theme>=0.4.3",
 ]
 
 tests_require = [
@@ -27,17 +23,15 @@ tests_require = [
     "flake8-debugger==4.0.0",
 ]
 
-with open("README.rst") as fh:
-    long_description = re.sub(
-        "^.. start-no-pypi.*^.. end-no-pypi", "", fh.read(), flags=re.M | re.S
-    )
+
 
 setup(
     name="wagtail-2fa-v6",
     version="1.0.3",
     description="Wagtail two-factor auth, updated for Wagtail 6+",
+    # long_description and long_description_content_type are now handled by pyproject.toml
     author="ravigupta-art",
-    author_email="52917700+ravigupta-art@users.noreply.github.com",
+    author_email="ravi.opensource@protonmail.com",
     url="https://github.com/ravigupta-art/wagtail-2fa-v6",
     license="MIT",
     classifiers=[
@@ -66,7 +60,6 @@ setup(
         "six>=1.14.0",
     ],
     extras_require={
-        "docs": ["sphinx>=1.4.1", "sphinx_rtd_theme>=0.4.3"],
         "test": ["pytest", "pytest-django", "coverage"],
     },
     python_requires=">=3.8",

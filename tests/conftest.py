@@ -30,7 +30,7 @@ def pytest_configure():
             "wagtail.admin",
             "wagtail",
             # "wagtail_modeladmin",          # if Wagtail >=5.1; Don't repeat if it's there already
-            "wagtail.contrib.modeladmin",    # if Wagtail <5.1;  Don't repeat if it's there already
+            # "wagtail.contrib.modeladmin",    # if Wagtail <5.1;  Deprecated, replaced by SnippetViewSet/ModelViewSet in Wagtail >=6.0
             "modelcluster",
             "taggit",
             "django.contrib.admin",

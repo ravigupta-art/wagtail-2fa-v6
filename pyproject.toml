@@ -10,7 +10,7 @@ readme = { file = "README.md", content-type = "text/markdown" }
 requires-python = ">=3.8"
 license = { file = "LICENSE" }
 authors = [
-  { name = "ravigupta-art", email = "52917700+ravigupta-art@users.noreply.github.com" },
+  { name = "ravigupta-art", email = "ravi.opensource@protonmail.com" },
 ]
 classifiers=[
     "Development Status :: 4 - Beta",
@@ -31,3 +31,7 @@ classifiers=[
 [project.urls]
 Homepage = "https://github.com/ravigupta-art/wagtail-2fa-v6"
 Issues   = "https://github.com/ravigupta-art/wagtail-2fa-v6/issues"
+
+
+
+

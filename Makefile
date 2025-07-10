@@ -1,8 +1,5 @@
-.PHONY: install test upload docs sandbox
-
-
 install:
-	pip install -e .[docs,test]
+	pip install -e .[test]
 
 test:
 	py.test
@@ -13,8 +10,7 @@ retest:
 coverage:
 	py.test --cov=wagtail_2fa --cov-report=term-missing --cov-report=html
 
-docs:
-	$(MAKE) -C docs html
+
 
 makemessages:
 	cd src/wagtail_2fa && django-admin makemessages -a
